@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="Form.js"></script>
+    <style type="text/css">
+    #right {
+        display: none;
+        color: green;
+    }
+    
+    #cross {
+        display: none;
+        color: red;
+    }
+    
+    #right11 {
+        display: none;
+        color: green;
+    }
+    
+    #cross11 {
+        display: none;
+        color: red;
+    }
+    
+    #right22 {
+        display: none;
+        color: green;
+    }
+    
+    #cross22 {
+        display: none;
+        color: red;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-3">
+                <img src="logo.jpg" width="50px" height="50px" />
+            </div>
+            <div class="col-xs-6">
+                <h2>Bootstrap Design</h2>
+            </div>
+            <div class="col-xs-3">user name....</div>
+        </div>
+        <hr/>
+        <h3>Ramya Divi</h3>
+        <form class="form-horizontal" action="#" onsubmit="getdata()">
+            <div class="form-group">
+                <label for="userName" class="col-xs-2 control-label">Name:</label>
+                <div class=" col-xs-9  ">
+                    <input type="text" oninput="FormValidationUser()" class="form-control row" id="userName" placeholder="Name" required autofocus>
+                    <span class="glyphicon glyphicon-ok form-control-feedback " id="right" aria-hidden="true"></span>
+                    <span class="glyphicon glyphicon-remove form-control-feedback" id="cross" aria-hidden="true"></span>
+                    <!-- row to be added to remove pading-->
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-inline">
+                    <label class="col-xs-2 control-label" for="iAmount">Amount:</label>
+                    <div class="input-group col-xs-9" id="right1" id="cross1">
+                        <span class="input-group-addon">$</span>
+                        <input type="number" oninput="FormValidationAmt()" class="form-control " id="iAmount" placeholder="Amount" required>
+                        <span class="input-group-addon">.00</span>
+                        <span class="glyphicon glyphicon-ok form-control-feedback " id="right11" aria-hidden="true"></span>
+                        <span class="glyphicon glyphicon-remove form-control-feedback" id="cross11" aria-hidden="true"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="iPassword" class="col-xs-2 control-label">Password:</label>
+                <div class="col-xs-9">
+                    <input type="password" oninput="FormValidationPwd()" class="form-control row " id="iPassword" placeholder="Password" required>
+                    <span class="glyphicon glyphicon-ok form-control-feedback " id="right22" aria-hidden="true"></span>
+                    <span class="glyphicon glyphicon-remove form-control-feedback" id="cross22" aria-hidden="true"></span>
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="radio-inline col-xs-offset-2 ">
+                    <input type="radio" name="radioOptions"> savings
+                </label>
+                <label class="radio-inline">
+                    <input type="radio" name="radioOptions" id="iRadio2" value="option2"> current
+                </label>
+            </div>
+            <div class="form-group ">
+                <div class="col-xs-offset-2">
+                    <button type="submit" class="btn " onclick="FormValidation()">Submit</button>&nbsp;
+                    <button type="reset" class="btn ">reset</button>
+                </div>
+            </div>
+        </form>
+        <div id="usr">
+        </div>
+        <div id="amt">
+        </div>
+        <hr/>
+        <div class="row">
+            <div class="col-xs-7">&#169;Copyright</div>
+            <div class="col-xs-3">About</div>
+            <div class="col-xs-2">ContactUs</div>
+        </div>
+    </div>
+</body>
+
+</html>
