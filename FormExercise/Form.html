@@ -8,40 +8,10 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="Form.js"></script>
-    <style type="text/css">
-    #right {
-        display: none;
-        color: green;
-    }
-    
-    #cross {
-        display: none;
-        color: red;
-    }
-    
-    #right11 {
-        display: none;
-        color: green;
-    }
-    
-    #cross11 {
-        display: none;
-        color: red;
-    }
-    
-    #right22 {
-        display: none;
-        color: green;
-    }
-    
-    #cross22 {
-        display: none;
-        color: red;
-    }
-    </style>
+    <link rel="stylesheet" href="form.css">
 </head>
 
-<body>
+<body background="background.jpg">
     <div class="container">
         <div class="row">
             <div class="col-xs-3">
@@ -57,8 +27,8 @@
         <form class="form-horizontal" action="#" onsubmit="getdata()">
             <div class="form-group">
                 <label for="userName" class="col-xs-2 control-label">Name:</label>
-                <div class=" col-xs-9  ">
-                    <input type="text" oninput="FormValidationUser()" class="form-control row" id="userName" placeholder="Name" required autofocus>
+                <div class=" col-xs-9 row has-feedback">
+                    <input type="text" oninput="FormValidationUser()" class="form-control" id="userName" placeholder="Name" required autofocus>
                     <span class="glyphicon glyphicon-ok form-control-feedback " id="right" aria-hidden="true"></span>
                     <span class="glyphicon glyphicon-remove form-control-feedback" id="cross" aria-hidden="true"></span>
                     <!-- row to be added to remove pading-->
@@ -67,9 +37,9 @@
             <div class="form-group">
                 <div class="form-inline">
                     <label class="col-xs-2 control-label" for="iAmount">Amount:</label>
-                    <div class="input-group col-xs-9" id="right1" id="cross1">
+                    <div class="input-group col-xs-9 has-feedback">
                         <span class="input-group-addon">$</span>
-                        <input type="number" oninput="FormValidationAmt()" class="form-control " id="iAmount" placeholder="Amount" required>
+                        <input type="text" oninput="FormValidationAmt()" class="form-control" id="iAmount" placeholder="Amount" required>
                         <span class="input-group-addon">.00</span>
                         <span class="glyphicon glyphicon-ok form-control-feedback " id="right11" aria-hidden="true"></span>
                         <span class="glyphicon glyphicon-remove form-control-feedback" id="cross11" aria-hidden="true"></span>
@@ -78,8 +48,8 @@
             </div>
             <div class="form-group">
                 <label for="iPassword" class="col-xs-2 control-label">Password:</label>
-                <div class="col-xs-9">
-                    <input type="password" oninput="FormValidationPwd()" class="form-control row " id="iPassword" placeholder="Password" required>
+                <div class="col-xs-9 row has-feedback">
+                    <input type="password" oninput="FormValidationPwd()" class="form-control" id="iPassword" placeholder="Password" required>
                     <span class="glyphicon glyphicon-ok form-control-feedback " id="right22" aria-hidden="true"></span>
                     <span class="glyphicon glyphicon-remove form-control-feedback" id="cross22" aria-hidden="true"></span>
                 </div>
@@ -99,10 +69,6 @@
                 </div>
             </div>
         </form>
-        <div id="usr">
-        </div>
-        <div id="amt">
-        </div>
         <hr/>
         <div class="row">
             <div class="col-xs-7">&#169;Copyright</div>

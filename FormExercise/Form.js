@@ -1,9 +1,8 @@
 function getdata() {
     var a = document.getElementById('userName').value;
     var b = document.getElementById('iAmount').value;
-    document.getElementById('usr').innerHTML = " UserName: " + a;
-    document.getElementById('amt').innerHTML = " Amount: " + b;
-    alert("correct");
+    alert(" Amount: " + b + " UserName: " + a);
+
 }
 
 function FormValidationUser() {
@@ -20,8 +19,6 @@ function FormValidationUser() {
         document.getElementById('userName').style.borderColor = "red";
         document.getElementById('right').style.display = "none";
         document.getElementById('cross').style.display = "block";
-
-
     }
     return isValid;
 }
@@ -30,7 +27,7 @@ function FormValidationAmt() {
     var amount = document.getElementById('iAmount').value;
     var isVaid = true;
     //Amount Validation   
-     if (amount == "" || isNaN(amount) || amount <0 ) {
+    if (amount == "" || isNaN(amount) || amount < 0) {
 
         document.getElementById('iAmount').style.borderColor = "red";
         document.getElementById('right11').style.display = "none";
@@ -48,7 +45,7 @@ function FormValidationPwd() {
     var passwd = document.getElementById('iPassword').value;
     var isVaid = true;
     //Password Validation   
-    if (passwd == "" || passwd.length < 5) {
+    if (passwd == "" || passwd.length < 5 || passwd.length > 15) {
 
         document.getElementById('iPassword').style.borderColor = "red";
         document.getElementById('right22').style.display = "none";
@@ -59,7 +56,5 @@ function FormValidationPwd() {
         document.getElementById('right22').style.display = "block";
         document.getElementById('cross22').style.display = "none";
     }
-
     return isValid;
-
 }
